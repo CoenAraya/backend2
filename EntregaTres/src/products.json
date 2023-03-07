@@ -1,0 +1,12 @@
+[
+    { "id": 1, "nombre": "Computadora", "precio": 800, "cantidad": 10 },
+    { "id": 2, "nombre": "Monitor", "precio": 200, "cantidad": 15 },
+    { "id": 3, "nombre": "Teclado", "precio": 50, "cantidad": 20 },
+    { "id": 4, "nombre": "Mouse", "precio": 30, "cantidad": 25 },
+    { "id": 5, "nombre": "Altavoces", "precio": 100, "cantidad": 8 },
+    { "id": 6, "nombre": "Auriculares", "precio": 70, "cantidad": 12 },
+    { "id": 7, "nombre": "Tablet", "precio": 500, "cantidad": 5 },
+    { "id": 8, "nombre": "Smartphone", "precio": 700, "cantidad": 7 },
+    { "id": 9, "nombre": "Impresora", "precio": 150, "cantidad": 18 },
+    { "id": 10, "nombre": "Disco duro externo", "precio": 120, "cantidad": 9 }
+]
