@@ -12,20 +12,27 @@ rutaCarrito.get('/', async (peticion, respuesta) => {
   respuesta.json(listaCarritos);
 });
 
-rutaCarrito.delete('/:id', (peticion, respuesta) => {
-  
+rutaCarrito.delete('/:pid', (peticion, respuesta) => {
+  const id = parseInt(peticion.params.pid);
+  const carrito = carritos.deleteById(id);
+  respuesta.json('Carrito eliminado !')
 });
 
-rutaCarrito.get('/:id/productos', (peticion, respuesta) => {
-  
+rutaCarrito.get('/:cid/productos', async (peticion, respuesta) => {
+  const id = parseInt(peticion.params.cid);
+  const productos = await carritos.getProductsCarrito(id);
+  if(!productos){
+    respuesta.json({error: 'carrito sin productos'})
+  }else{
+  respuesta.json(productos)
+  }
 });
 
-rutaCarrito.post('/:id/productos', (peticion, respuesta) => {
-  
-});
-
-rutaCarrito.delete('/:id/productos/:id_prod', (peticion, respuesta) => {
-  
+rutaCarrito.post('/:cid/productos/:pid', async(peticion, respuesta) => {
+  const idCarrito = parseInt(peticion.params.cid);
+  const idProducto = parseInt(peticion.params.pid);
+  const cartCreate = await carritos.addToCart(idCarrito, idProducto)
+  respuesta.json(cartCreate);
 });
 
 

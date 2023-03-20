@@ -19,6 +19,7 @@ export class Contenedor {
     await fs.promises.writeFile(this.nombre, JSON.stringify(archivoParseado, null, 2));
     return id;
   }
+
   async update(objeto, id) {
     const archivo = await fs.promises.readFile(this.nombre, 'utf-8');
     const archivoParseado = JSON.parse(archivo);
@@ -43,6 +44,7 @@ export class Contenedor {
       return "ok"
   }
   }
+
   async getById(id) {
     const archivo = await fs.promises.readFile(this.nombre, 'utf-8');
     const archivoParseado = JSON.parse(archivo);
@@ -81,4 +83,61 @@ export class Contenedor {
     const arregloVacio = [];
     await fs.promises.writeFile(this.nombre, JSON.stringify(arregloVacio, null, 2));
   }
+
+  async saveCart() {
+    const archivo = await fs.promises.readFile(this.nombre, 'utf-8');
+    const archivoParseado = JSON.parse(archivo);
+    let idCarrito = 1;
+    archivoParseado.forEach((element, index) => {
+      if (element.id >= idCarrito) {
+        idCarrito = element.id + 1;
+      }
+    });
+    const newCart = {
+      id: idCarrito,
+      productos: [],
+    }
+    archivoParseado.push(newCart);
+    await fs.promises.writeFile(this.nombre, JSON.stringify(archivoParseado, null, 2));
+    return idCarrito;
+  }
+
+  async getProductsCarrito(id) {
+    const archivo = await fs.promises.readFile(this.nombre, 'utf-8');
+    const archivoParseado = JSON.parse(archivo);
+    const carrito = archivoParseado.find((element) => element.id == id)
+    if (carrito) {
+        return carrito.productos;
+      } else {
+        return null;
+      }
+  }
+
+  async addToCart(id, producto) {
+    const archivo = await fs.promises.readFile(this.nombre, 'utf-8');
+    const archivoParseado = JSON.parse(archivo);
+    const carrito = archivoParseado.find((element) => element.id == id)
+    if (carrito) {
+      const existe = carrito.productos.find((element) => element.idProducto == producto)
+      //si el producto no existe lo agrego al carrito
+      if(!existe) {
+        producto= {
+          idProducto: producto,
+          quantity: 1
+        }
+        carrito.productos.push(producto);
+        }else{ //si el producto existe, le sumo 1 a la cantidad
+          const index = carrito.productos.indexOf(existe)
+          carrito.productos[index].quantity += 1
+        }
+
+      const cartIndex = archivoParseado.indexOf(carrito)
+      archivoParseado.splice(cartIndex, 1, carrito)
+      await fs.promises.writeFile(this.nombre, JSON.stringify(archivoParseado, null, 2));
+      return "producto agregado al carrito"
+    } else {
+      return "carrito no encontrado";
+    }
+  }
+
 }
