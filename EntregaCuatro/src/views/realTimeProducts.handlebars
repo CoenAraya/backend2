@@ -1,29 +1,41 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Lista de Productos</title>
-    <script src="https://cdn.jsdelivr.net/npm/handlebars/dist/handlebars.min.js"></script>
-  </head>
-  <body>
-    <ul id="product-list">
-      {{#each products}}
-      <li>{{this.name}} - ${{this.price}}</li>
-      {{/each}}
-    </ul>
+<h2>Lista de productos (Real Time)</h2>
 
-    <script id="handlebars-template" type="text/x-handlebars-template">
-      <li>{{name}} - ${{price}}</li>
-    </script>
+<table id="product-table" border="1">
+  <thead>
+    <tr>
+      <th>Proudcto</th>
+      <th>Precio</th>
+      <th>Eliminar</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each products}}
+    <tr>
+      <td>{{title}}</td>
+      <td>${{price}}</td>
+      <td><button class="delete-product" data-id="{{id}}">Borrar</button></td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
 
-    <script>
-      const socket = new WebSocket('ws://localhost:8080');
+<br />
+<hr /><br />
 
-      socket.addEventListener('message', function (event) {
-        const data = JSON.parse(event.data);
-        const template = Handlebars.compile(document.getElementById('handlebars-template').innerHTML);
-        const html = template(data);
-        document.getElementById('product-list').innerHTML += html;
-      });
-    </script>
-  </body>
-</html>
+<h2>Agregar Producto</h2>
+
+<form id="create-product-form">
+  <label for="product-title">Nombre</label>
+  <br />
+  <input type="text" id="product-title" name="title" />
+  <br />
+  <label for="product-price">Precio</label>
+  <br />
+  <input type="number" id="product-price" name="price" />
+  <br />
+  <br />
+  <button type="submit">Agregar</button>
+</form>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/index.js"></script>

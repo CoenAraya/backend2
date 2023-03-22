@@ -32,3 +32,15 @@ const httpServer = app.listen(PORT, () => {
 
 // inicializar el socket.io con el servidor http
 const io = new Server(httpServer);
+io.on('connection',  (socket) => {
+    socket.on('createProduct', async (data) => {
+    const products = await rutaProducto.getAll();
+    products.push(data);
+    io.emit('product-list', products);
+    console.log(products)
+    console.log(data)
+    socket.broadcast.emit('message3', `El cliente con id: ${socket.id} ha creado un producto nuevo`);
+    
+    await rutaProducto.save(data)
+    })
+})
