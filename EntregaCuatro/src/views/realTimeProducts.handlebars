@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lista de Productos</title>
+    <script src="https://cdn.jsdelivr.net/npm/handlebars/dist/handlebars.min.js"></script>
+  </head>
+  <body>
+    <ul id="product-list">
+      {{#each products}}
+      <li>{{this.name}} - ${{this.price}}</li>
+      {{/each}}
+    </ul>
+
+    <script id="handlebars-template" type="text/x-handlebars-template">
+      <li>{{name}} - ${{price}}</li>
+    </script>
+
+    <script>
+      const socket = new WebSocket('ws://localhost:8080');
+
+      socket.addEventListener('message', function (event) {
+        const data = JSON.parse(event.data);
+        const template = Handlebars.compile(document.getElementById('handlebars-template').innerHTML);
+        const html = template(data);
+        document.getElementById('product-list').innerHTML += html;
+      });
+    </script>
+  </body>
+</html>
