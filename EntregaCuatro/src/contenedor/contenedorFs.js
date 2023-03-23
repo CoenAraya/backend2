@@ -16,7 +16,7 @@ export class Contenedor {
     });
     objeto.id = id;
     archivoParseado.push(objeto);
-    await fs.promises.writeFile(this.nombre, JSON.stringify(archivoParseado, null, 2));
+    await fs.promises.writeFile(this.nombre, JSON.stringify(archivoParseado));
     return id;
   }
 
@@ -58,9 +58,16 @@ export class Contenedor {
   }
 
   async getAll() {
-    const archivo = await fs.promises.readFile(this.nombre, 'utf-8');
-    const archivoParseado = JSON.parse(archivo);
-    return archivoParseado;
+    try {
+      const products = await fs.promises.readFile(this.nombre, 'utf-8');
+      return JSON.parse(products);
+    } catch (err) {
+        if (err.code === 'ENOENT') {
+            await this.save([]);
+            return [];
+        }
+        throw err;
+    }
   }
 
   async deleteById(id) {
