@@ -1,0 +1,15 @@
+{{#if products.length}}
+  <h2>Bienvenido {{username}}!</h2></h2>
+  <h2>Elige un producto:</h2>
+  <ul>
+    {{#each products}}
+      <li>#id: {{id}}</li>
+      <li>Product: {{title}}</li>
+      <li>Description: {{description}}</li>
+      <li>Price: ${{price}}</li>
+      <hr />
+    {{/each}}
+  </ul>
+{{else}}
+  <h2>Products didn't register</h2>
+{{/if}}

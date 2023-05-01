@@ -1,0 +1,326 @@
+[
+    {   "id": 1,
+        "title": "Heladera",
+        "description": "Heladera que enfria",
+        "category": "Electrodomésticos",
+        "price": 150,
+        "thumbnail": "https://http2.mlstatic.com/D_NQ_NP_2X_972873-MLA50008739804_052022-F.webp",
+        "code": "1421",
+        "stock": 50,
+        "status": true
+    },
+    {
+        "id": 2,
+        "title": "Lavadora",
+        "description": "Lavadora con capacidad para 7 kg",
+        "category": "Electrodomésticos",
+        "price": 300,
+        "thumbnail": "https://http2.mlstatic.com/D_NQ_NP_2X_803168-MLA46758712906_072021-F.webp",
+        "code": "1422",
+        "stock": 20,
+        "status": true
+    },
+    {
+        "id": 3,
+        "title": "Licuadora",
+        "description": "Licuadora de alta potencia",
+        "category": "Electrodomésticos",
+        "price": 70,
+        "thumbnail": "https://http2.mlstatic.com/D_NQ_NP_2X_817108-MLA43787909081_102020-F.webp",
+        "code": "1423",
+        "stock": 100,
+        "status": true
+    },
+    {
+        "id": 4,
+        "title": "Aspiradora",
+        "description": "Aspiradora inalámbrica",
+        "category": "Electrodomésticos",
+        "price": 80,
+        "thumbnail": "https://http2.mlstatic.com/D_NQ_NP_2X_903985-MLA45185736010_032021-F.webp",
+        "code": "1424",
+        "stock": 30,
+        "status": true
+    },
+    {
+        "id": 5,
+        "title": "Microondas",
+        "description": "Microondas con grill y descongelado",
+        "category": "Electrodomésticos",
+        "price": 120,
+        "thumbnail": "https://http2.mlstatic.com/D_NQ_NP_2X_889888-MLA45645238715_042021-F.webp",
+        "code": "1425",
+        "stock": 15,
+        "status": true
+    },
+    {
+        "title": "Horno eléctrico",
+        "description": "Horno eléctrico de 45 litros",
+        "category": "Electrodomésticos",
+        "price": 200,
+        "thumbnail": "https://http2.mlstatic.com/D_NQ_NP_2X_725664-MLA46397409707_062021-F.webp",
+        "code": "1426",
+        "stock": 10,
+        "status": true
+    },
+    {
+        "title": "Cafetera",
+        "description": "Cafetera de cápsulas",
+        "category": "Electrodomésticos",
+        "price": 60,
+        "thumbnail": "https://http2.mlstatic.com/D_NQ_NP_2X_930877-MLA46704154868_072021-F.webp",
+        "code": "1427",
+        "stock": 25,
+        "status": true
+    },
+    {
+        "title": "Televisor",
+        "description": "Televisor Smart TV de 55 pulgadas",
+        "category": "Electrónica",
+        "price": 700,
+        "thumbnail": "https://http2.mlstatic.com/D_NQ_NP_2X_936364-MLA40135640184_122019-F.webp",
+        "code": "1428",
+        "stock": 5,
+        "status": true
+    },
+    {
+        "title": "Equipo de sonido",
+        "description": "Equipo de sonido con conexión Bluetooth",
+        "category": "Electrónica",
+        "price": 250,
+        "thumbnail": "https://http2.mlstatic.com/D_NQ_NP_2X_835791-MLA46077409710_052021-F.webp",
+        "code": "1429",
+        "stock": 20,
+        "status": true
+    },
+    {
+        "title": "Aire acondicionado",
+        "description": "Aire acondicionado split frío/calor",
+        "category": "Climatización",
+        "price": 800,
+        "thumbnail": "https://http2.mlstatic.com/D_NQ_NP_2X_967881-MLA47162295454_082021-F.webp",
+        "code": "1430",
+        "stock": 10,
+        "status": true
+    },
+    {
+        "title": "Ventilador de techo",
+        "description": "Ventilador de techo con luz LED",
+        "category": "Climatización",
+        "price": 100,
+        "thumbnail": "https://http2.mlstatic.com/D_NQ_NP_2X_913408-MLA40078299454_122019-F.webp",
+        "code": "1431",
+        "stock": 30,
+        "status": true
+    },
+    {
+        "title": "Plancha",
+        "description": "Plancha a vapor con suela de cerámica",
+        "category": "Hogar",
+        "price": 50,
+        "thumbnail": "https://http2.mlstatic.com/D_NQ_NP_2X_686951-MLA43724682670_102020-F.webp",
+        "code": "1432",
+        "stock": 50,
+        "status": true
+    },
+    {
+        "title": "Aspiradora robot",
+        "description": "Aspiradora robot con sensor de obstáculos",
+        "category": "Hogar",
+        "price": 150,
+        "thumbnail": "https://http2.mlstatic.com/D_NQ_NP_2X_683441-MLA45563840728_042021-F.webp",
+        "code": "1433",
+        "stock": 5,
+        "status": true
+    },
+    {
+        "title": "Mesa de comedor",
+        "description": "Mesa de comedor para 6 personas",
+        "category": "Muebles",
+        "price": 400,
+        "thumbnail": "https://http2.mlstatic.com/D_NQ_NP_2X_967947-MLA46398717592_062021-F.webp",
+        "code": "1434",
+        "stock": 2,
+        "status": true
+    },
+    {
+        "title": "Smartphone Samsung Galaxy S21",
+        "description": "Smartphone con pantalla de 6.2 pulgadas y cámara de 64 MP",
+        "category": "Electrónica",
+        "price": 799,
+        "thumbnail": "https://http2.mlstatic.com/D_NQ_NP_2X_901763-MLA45548998900_042021-F.webp",
+        "code": "1523",
+        "stock": 10,
+        "status": true
+    },
+    {
+        "title": "Laptop HP Pavilion",
+        "description": "Laptop con procesador Intel Core i5 y pantalla de 14 pulgadas",
+        "category": "Computadoras",
+        "price": 899,
+        "thumbnail": "https://http2.mlstatic.com/D_NQ_NP_2X_665932-MLA44912419146_022021-F.webp",
+        "code": "1524",
+        "stock": 5,
+        "status": true
+    },
+    {
+        "title": "Smart TV LG 55UN7300",
+        "description": "Smart TV con resolución 4K y pantalla de 55 pulgadas",
+        "category": "Electrónica",
+        "price": 1099,
+        "thumbnail": "https://http2.mlstatic.com/D_NQ_NP_2X_924811-MLA40750836062_022020-F.webp",
+        "code": "1525",
+        "stock": 8,
+        "status": true
+    },
+    {
+        "title": "Impresora HP DeskJet Plus",
+        "description": "Impresora multifunción con conectividad WiFi",
+        "category": "Computadoras",
+        "price": 149,
+        "thumbnail": "https://http2.mlstatic.com/D_NQ_NP_2X_798820-MLA46542618196_062021-F.webp",
+        "code": "1526",
+        "stock": 20,
+        "status": true
+    },
+    {
+        "title": "Cámara Canon EOS Rebel T7",
+        "description": "Cámara DSLR con sensor CMOS de 24.1 megapíxeles",
+        "category": "Electrónica",
+        "price": 499,
+        "thumbnail": "https://http2.mlstatic.com/D_NQ_NP_2X_965570-MLA46167371880_052021-F.webp",
+        "code": "1527",
+        "stock": 3,
+        "status": true
+    },
+    {
+        "title": "Tablet Apple iPad Air",
+        "description": "Tablet con pantalla de 10.9 pulgadas y procesador A14 Bionic",
+        "category": "Electrónica",
+        "price": 599,
+        "thumbnail": "https://http2.mlstatic.com/D_NQ_NP_2X_988788-MLA44450493407_122020-F.webp",
+        "code": "1528",
+        "stock": 7,
+        "status": true
+    },
+    {
+        "title": "Aspiradora inalámbrica Dyson V11 Absolute",
+        "description": "Aspiradora inalámbrica con batería de larga duración y filtro HEPA",
+        "category": "Electrodomésticos",
+        "price": 699,
+        "thumbnail": "https://http2.mlstatic.com/D_NQ_NP_2X_842580-MLA46743147528_072021-F.webp",
+        "code": "1530",
+        "stock": 15,
+        "status": true
+    },
+    {
+        "title": "Horno eléctrico Black+Decker",
+        "description": "Horno eléctrico con capacidad de 6 rebanadas de pan o una pizza de 12 pulgadas",
+        "category": "Electrodomésticos",
+        "price": 89,
+        "thumbnail": "https://http2.mlstatic.com/D_NQ_NP_2X_714905-MLA47530483831_092021-F.webp",
+        "code": "1531",
+        "stock": 25,
+        "status": true
+    },
+    {
+        "title": "Refrigerador LG Inverter",
+        "description": "Refrigerador con tecnología Inverter Linear Compressor y dispensador de agua y hielo",
+        "category": "Electrodomésticos",
+        "price": 1399,
+        "thumbnail": "https://http2.mlstatic.com/D_NQ_NP_2X_918219-MLA46313208063_062021-F.webp",
+        "code": "1532",
+        "stock": 5,
+        "status": true
+    },
+    {
+        "title": "Lavadora Samsung AddWash",
+        "description": "Lavadora con capacidad de 11 kg y tecnología AddWash para añadir ropa en medio del ciclo",
+        "category": "Electrodomésticos",
+        "price": 1099,
+        "thumbnail": "https://http2.mlstatic.com/D_NQ_NP_2X_906784-MLA45842486439_052021-F.webp",
+        "code": "1533",
+        "stock": 6,
+        "status": true
+    },
+    {
+        "title": "Robot de cocina Moulinex Masterchef Gourmet",
+        "description": "Robot de cocina con capacidad de 4.6 litros y 900 watts de potencia",
+        "category": "Electrodomésticos",
+        "price": 399,
+        "thumbnail": "https://http2.mlstatic.com/D_NQ_NP_2X_968227-MLA44447978408_122020-F.webp",
+        "code": "1534",
+        "stock": 8,
+        "status": true
+    },
+    {
+        "title": "Cafetera De'Longhi Dedica",
+        "description": "Cafetera con bomba de presión de 15 bares y calentador de tazas",
+        "category": "Electrodomésticos",
+        "price": 299,
+        "thumbnail": "https://http2.mlstatic.com/D_NQ_NP_2X_889747-MLA46835432403_072021-F.webp",
+        "code": "1535",
+        "stock": 10,
+        "status": true
+    },
+    {
+        "title": "Secadora Whirlpool 7MWGD8500EN",
+        "description": "Secadora de gas con capacidad de 7.4 pies cúbicos y sensor de humedad",
+        "category": "Electrodomésticos",
+        "price": 999,
+        "thumbnail": "https://http2.mlstatic.com/D_NQ_NP_2X_768222-MLA43638373213_102020-F.webp",
+        "code": "1536",
+        "stock": 3,
+        "status": true
+    },
+    {
+        "title": "Cocina a gas Whirlpool WFG505M0BS",
+        "description": "Cocina a gas con 5 quemadores y horno de 5.0 pies cúbicos",
+        "category": "Electrodomésticos",
+        "price": 699,
+        "thumbnail": "https://http2.mlstatic.com/D_NQ_NP_2X_720799-MLA46150022343_052021-F.webp",
+        "code": "1537",
+        "stock": 9,
+        "status": true
+    },
+    {
+        "title": "Microondas Panasonic NN-SN97JS",
+        "description": "Microondas de acero inoxidable con sensor de cocción y tecnología Inverter",
+        "category": "Electrodomésticos",
+        "price": 279,
+        "thumbnail": "https://http2.mlstatic.com/D_NQ_NP_2X_800005-MLA46868919735_072021-F.webp",
+        "code": "1538",
+        "stock": 15,
+        "status": true
+    },
+    {
+        "title": "Asador eléctrico Oster",
+        "description": "Asador eléctrico con tapa de vidrio y bandeja recolectora de grasa",
+        "category": "Electrodomésticos",
+        "price": 129,
+        "thumbnail": "https://http2.mlstatic.com/D_NQ_NP_2X_846277-MLA45617792432_042021-F.webp",
+        "code": "1539",
+        "stock": 20,
+        "status": true
+    },
+    {
+        "title": "Ventilador de torre Honeywell HYF290B",
+        "description": "Ventilador de torre con control remoto y oscilación de 90 grados",
+        "category": "Electrodomésticos",
+        "price": 69,
+        "thumbnail": "https://http2.mlstatic.com/D_NQ_NP_2X_688651-MLA45517619048_042021-F.webp",
+        "code": "1540",
+        "stock": 30,
+        "status": true
+    },
+    {
+        "title": "Aire acondicionado portátil LG LP0817WSR",
+        "description": "Aire acondicionado portátil con capacidad de enfriamiento de 8000 BTU",
+        "category": "Electrodomésticos",
+        "price": 399,
+        "thumbnail": "https://http2.mlstatic.com/D_NQ_NP_2X_705838-MLA40957374370_032020-F.webp",
+        "code": "1541",
+        "stock": 5,
+        "status": true
+    }
+]
