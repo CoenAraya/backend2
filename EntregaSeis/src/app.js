@@ -10,6 +10,8 @@ import ProductManager from '../src/Dao/ProductManagerMongo.js';
 import session from 'express-session';
 import cookieParser from 'cookie-parser';
 import mongoStore from 'connect-mongo';
+import passport from 'passport';
+import './passport/passportStrategies.js';
 
 const path = __dirname + '/productosAgregar.json';
 const productManager = new ProductManager(path);
@@ -46,6 +48,10 @@ app.use(
     },
   })
 );
+
+//Passport
+app.use(passport.initialize());
+app.use(passport.session());
 
 //Routes
 app.use('/views', viewsRouter);

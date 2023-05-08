@@ -26,7 +26,7 @@ router.get('/', async (req, res) => {
 });
 
   router.get("/products", async (req, res) => {
-    if (req.session.username) {
+   
     const { limit = 10, page = 0 } = req.query;
     const products = await productManager.getProducts(
       limit,
@@ -43,9 +43,7 @@ router.get('/', async (req, res) => {
       hasNextPage: products.hasNextPage,
       hasPrevPage: products.hasPrevPage,
     });
-    }else{
-      res.redirect('/login');
-    }
+    
   });
 
 

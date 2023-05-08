@@ -68,7 +68,9 @@ router.post('/', passport.authenticate('login', {successRedirect:'/views'}),(req
 });
 
 router.get('/singupGithub', passport.authenticate('github', {scope: ['user:username']}));
-router.get('/github', passport.authenticate('github'))
+router.get('/github', passport.authenticate('github' , { failureRedirect: '/login/errorLogin' }), (req, res) => {
+  res.redirect('/views/products');
+  });
 
 
 
