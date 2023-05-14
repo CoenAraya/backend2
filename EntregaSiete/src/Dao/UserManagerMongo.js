@@ -16,12 +16,12 @@ class UsersManager {
     }
   }
 
-  async loginUser({user}) {
-    console.log(user);
-    const { email, password } = user;
+  async loginUser(user) {
+    const usuario = {email :user.userDB, 
+                     password: user.pass}
     try {
-      const user = await userModel.findOne({ email, password });
-      return user;
+      const userLog = await userModel.findOne(usuario);
+      return userLog;
     } catch (error) {
       console.log(error);
       throw new Error(error);

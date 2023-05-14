@@ -18,10 +18,10 @@ passport.use(
             const pass = password
             const user = await usersManager.loginUser({ userDB, pass });
             if (!user) {
-                return done(null, false);
+                done(null, user);
             }
             
-            done(null, user);
+            return done(null, false);
             
             
         }
