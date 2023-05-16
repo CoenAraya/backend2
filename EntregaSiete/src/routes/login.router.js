@@ -62,7 +62,7 @@ router.get('/logout', async (req, res) => {
   }
 });
 
-router.post('/', passport.authenticate('login', {successRedirect:'/views'}),(req, res) =>{
+router.post('/', passport.authenticate('login', {successRedirect:'./views'}),(req, res) =>{
   console.log(req.user);
   res.send('ok')
 });

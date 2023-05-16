@@ -9,9 +9,8 @@ const router = Router();
 const productManager = new ProductManager(path);
 
 router.get('/', async (req, res) => {
-  if (req.session.username) {
-
-    console.log(req.session);
+  console.log(req);
+  if (req.user.email) {
     try {
       const products = await productManager.getProducts(100, 0, undefined, undefined, undefined, true);
       
